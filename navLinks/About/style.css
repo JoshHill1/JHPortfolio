@@ -91,6 +91,102 @@
 
 
 
+.home {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: var(--primaryColor);
+  align-items: center;
+  justify-content: center;
+  padding: 100px 10% 550px;
+  color: #fff;
+}
+.home2 {
+  padding: 146px 0 232px;
+  align-items: center;
+}
+
+.home-content {
+  max-width: 800px;
+  padding-top: 30px;
+}
+.home-content .head3 {
+  font-size: 42px;
+  font-weight: 700;
+  opacity: 0;
+  animation: slideBottom .5s ease forwards;
+  animation-delay: .7s;
+  text-align: center;
+}
+.home-content #imA .head3 {
+  margin-bottom: 90px;
+  animation: slideTop .5s ease forwards;
+  animation-delay: .7s;
+}
+.home-content .head3 span {
+  color: var(--secondaryColor);
+}
+.home-content h1 {
+  font-size: 76px;
+  font-weight: 700;
+  margin: -3px 0;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+  padding-bottom: 12px;
+  text-align: center;
+}
+.home-content p {
+  font-size: 16px;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+
+#imA {
+  display: flex;
+  padding-left: 175px;
+}
+
+#homep {
+  line-height: 1.5em;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.social-media {
+  padding-bottom: 155px;
+}
+.social-media a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  border: 2px solid var(--secondaryColor);
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--secondaryColor);
+  text-decoration: none;
+  margin: 20px 15px;
+  transition: .5s ease;
+  opacity: 0;
+  animation: zoomIn 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+.social-media a:hover {
+  background: var(--secondaryColor);
+  color: var(--primaryColor);
+  box-shadow: 0 0 20px var(--secondaryColor);
+}
+
+
+/* END OF HOME PAGE */
+
+
 
 
 /* KEYFRAME ANIMATIONS */
