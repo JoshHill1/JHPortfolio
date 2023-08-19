@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- link used to connect the website boxicons.com to the HTML -->
   <link rel="stylesheet" href="./zassets/style.css">
-  <title>J Hill's Portfolio</title>
+  <title>About Me</title>
 </head>
-
 <body>
   <header>
     <div id="THISISAWORKINPROGRESS">
@@ -17,47 +15,44 @@
     <div id="header">
       <h1><a href="#" class="logo">J Hill</a></h1>
       <nav class="navbar">
-        <a href="/index.html" style="--i:1;" id="active">Home</a>
+        <a href="./index.html" style="--i:1;" class="active">Home</a>
         <a href="./navLinks/About/about.html" style="--i:2;">About</a>
-        <a href="./navLinks/Skills/skills.html" style="--i:3;">Skills</a>
         <a href="./navLinks/Portfolio/portfolio.html" style="--i:4;">Portfolio</a>
         <a href="./navLinks/Contact/contact.html" style="--i:5;">Contact</a>
       </nav>
     </div>
   </header>
-
   <main>
-    <div class="heroSection">
-      <a href="./navLinks/About/about.html" id="aboutFloatingLink">
-        About Me!
-      </a>
-      <a href="./navLinks/Portfolio/portfolio.html" id="portfolioFloatingLink">
-        My Profile!
-      </a>
-      <a href="./navLinks/Contact/contact.html" id="contactFloatingLink">
-        My Contact info!
-      </a>
-      <a href="./navLinks/Skills/skills.html" id="skillsFloatingLink">
-        My Skills!
-      </a>
-    </div>
-
-    <div id="valueProposition">
-      <p>As a passionate developer with a background in graphic design, I built this website from scratch and used HTML, CSS, and JavaScript. <br>The purpose is to have an example of what I can do when making a website. Like what you see? Feel free to contact me.</p>
-      <button><a href="#" id="contactBtn">Link Tree</a></button>
-    </div>
-    <section id="about">
-      <div id="aboutText">
-        <h2>About Me</h2>
-        <p>I went into college not exactly knowing what I wanted to pursue. I had an intro class to web development class in my second year at ASU, and enjoyed learning about different HTML tags and learning CSS and what web designs I could come up with. The classes those following semesters weren't set up well. After some thinking and conversations with my parents, I pursued a gap year where I took a coding bootcamp that has allowed me to learn majority of what I put on this website.</p>
+    <section class="home">
+      <div class="home-content">
+        <p class="head3">Hello, my name is</p>
+        <h1>Joshua Hill</h1>
+        <div id="imA">
+          <p class="head3">I'm a <span class="multiple-text"></span></p>
+        </div>
+        <p id="homep">After getting a good understanding of frontend web development, I am making this webpage to professionally display what I've leared after taking college courses and a coding bootcamp.</p>
+  
+        <!-- <a href="#" class="btn">Download CV</a> -->
       </div>
-      <div id="aboutLink">
-        <button><a href="#" id="aboutBtn">Link</a></button>
+      
+      <div class="social-media">
+        <a target="_blank" href="https://www.linkedin.com/in/joshuahillaz0d/" style="--i:7;"><i class='bx bxl-linkedin'></i></a>
+        <a target="_blank" href="https://github.com/JoshHill1" style="--i:8;"><i class='bx bxl-github'></i></a>
+        <a target="_blank" href="https://www.instagram.com/josh_hil1/" style="--i:9;"><i class='bx bxl-instagram-alt'></i></a>
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=100009071997290" style="--i:10;"><i class='bx bxl-facebook'></i></a>
       </div>
     </section>
+
+
+    
+    
+    <!-- JAVASCRIPT CODE FILE LOCATION -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> <!-- Link used to use battboldt's JS file called typed.js -->
+    <script src="./zassets/script.js"></script>
   </main>
   <footer>
     
   </footer>
+  <script src="./script.js"></script>
 </body>
 </html>
