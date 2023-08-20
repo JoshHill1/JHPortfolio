@@ -192,16 +192,110 @@
 /* END OF HOME PAGE */
 
 
+#skills {
+  background-color: var(--primaryColor);
+  color: #FFF;
+  padding: 10px 10% 280px;
+}
+
+/* SVG curve */
+.curve {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background-color: #00000000;
+  z-index: 1;
+}
+
+.curve svg {
+  position: relative;
+  display: block;
+  width: calc(275% + 1.3px);
+  height: 172px;
+}
+
+.curve .shape-fill {
+  fill: var(--primaryColor);
+}
+
+
+/* Making the background of the curve black so that the "Project" text can be behind the curve */
+
+#bgBlack {
+  background-color: #000;
+}
+
+/* END OF SKILLS */
+
+
+/* Here, projectH2SlideIn and projectH2SlideOut are on two different lines. In order to have projectH2SlideOut aligned with projectH2SlideIn, you have to make it go up 97px */
+
+/*  Fix the overflow!!!  */
+#projects {
+  background-color: #000;
+}
+#projectH2SlideIn {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #FFF;
+  position: relative;
+  top: -130px;
+  font-size: 56px;
+  /* letter-spacing: 0.01em; */
+  animation: moveProjectsL2R1 10s linear infinite;
+  animation-fill-mode: forwards;
+
+}
+#projectH2SlideOut {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #FFF;
+  position: relative;
+  top: -227px;
+  font-size: 56px;
+  /* letter-spacing: 0.01em; */
+  animation: moveProjectsL2R2 10s linear infinite;
+  animation-fill-mode: forwards;
+
+}
+
+#projH2Outline {
+  color: #000;
+  -webkit-text-stroke: 2px #FFF;
+  font-size: 84px;
+}
+/*  */
+#projectsGrid {
+  padding: 10px 10%;
+}
+
+
+
+/* END OF PROJECTS */
+
+
+#aboutMe {
+  background-color: var(--primaryColor);
+  color: #FFF;
+  padding: 10px 10%;
+}
+
+
+
 
 
 /* KEYFRAME ANIMATIONS */
 
+/* ANIMATIONS FOR THE HOMESCREEN */
 @keyframes slideRight {
   0% {
     transform: translateX(-100px);
     opacity: 0;
   }
-
+  
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -225,7 +319,7 @@
     transform: translateY(100px);
     opacity: 0;
   }
-
+  
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -237,7 +331,7 @@
     transform: translateY(-100px);
     opacity: 0;
   }
-
+  
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -249,10 +343,39 @@
     transform: scale(0);
     opacity: 0;
   }
-
+  
   100% {
     transform: scale(1);
     opacity: 1;
   }
 }
 
+
+/* ANIMATIONS FOR THE "PROJECTS" TEXT GOING LEFT TO RIGHT */
+@keyframes moveProjectsL2R1 {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(0%);
+  }
+} 
+/* ANIMATIONS FOR THE "PROJECTS" TEXT GOING LEFT TO RIGHT */
+@keyframes moveProjectsL2R2 {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(100%);
+  }
+} 
+
+/* ANIMATIONS FOR THE "PROJECTS" TEXT GOING RIGHT TO LEFT */
+@keyframes moveProjectsR2L {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(100%);
+  }
+} 
