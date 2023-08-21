@@ -52,8 +52,12 @@
   text-decoration: none;
   font-weight: 600;
   cursor: default;
-  opacity: 0;
   animation: slideRight 1s ease forwards;
+  transition: all 1s;  /* IDK why this isn't getting a transition */
+}
+.logo:hover {
+  background: url(./Images/JHillHills4.png);
+  background-size: cover;
 }
 
 .navbar {
@@ -209,21 +213,16 @@
   background-color: #00000000;
   z-index: 1;
 }
-
 .curve svg {
   position: relative;
   display: block;
   width: calc(275% + 1.3px);
   height: 172px;
 }
-
 .curve .shape-fill {
   fill: var(--primaryColor);
 }
-
-
 /* Making the background of the curve black so that the "Project" text can be behind the curve */
-
 #bgBlack {
   background-color: #000;
 }
@@ -242,11 +241,9 @@
   white-space: nowrap;
   color: #FFF;
   position: relative;
-  top: -130px;
+  top: -120px;
   font-size: 56px;
-  /* letter-spacing: 0.01em; */
-  animation: moveProjectsL2R1 10s linear infinite;
-  animation-fill-mode: forwards;
+  animation: moveProjectsL2R 60s linear infinite;
 
 }
 #projectH2SlideOut {
@@ -254,23 +251,79 @@
   white-space: nowrap;
   color: #FFF;
   position: relative;
-  top: -227px;
+  top: -217px;
   font-size: 56px;
-  /* letter-spacing: 0.01em; */
-  animation: moveProjectsL2R2 10s linear infinite;
-  animation-fill-mode: forwards;
+  animation: moveProjectsL2R1 60s linear infinite;
 
 }
 
-#projH2Outline {
+#projectH2SlideIn1 {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #FFF;
+  position: relative;
+  top: -220px;
+  font-size: 56px;
+  animation: moveProjectsR2L 60s linear infinite;
+
+}
+#projectH2SlideOut1 {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #FFF;
+  position: relative;
+  top: -317px;
+  font-size: 56px;
+  animation: moveProjectsR2L1 60s linear infinite;
+
+}
+/*  */
+.projH2Outline {
   color: #000;
   -webkit-text-stroke: 2px #FFF;
   font-size: 84px;
 }
-/*  */
+
+/* END OF ANIMATED TEXT */
+
 #projectsGrid {
-  padding: 10px 10%;
+  padding: 10px 1%;
+  display: flex;
+  flex-direction: column;
 }
+
+#featuredRow {
+  display: flex;
+  justify-content: space-between;
+}
+#featuredRow p, h3 {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+#feat60Percent img {
+  height: 570px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+#feat40Percent img {
+  height: 570px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+/* !!!! */
+/* !!!! */
+/* Have this class be added when the img is being hovered */
+.displayProjText img {
+  opacity: 0.75;
+}
+/* !!!! */
+/* !!!! */
+/* !!!! */
 
 
 
@@ -352,7 +405,7 @@
 
 
 /* ANIMATIONS FOR THE "PROJECTS" TEXT GOING LEFT TO RIGHT */
-@keyframes moveProjectsL2R1 {
+@keyframes moveProjectsL2R {
   0% {
       transform: translateX(-100%);
   }
@@ -361,7 +414,7 @@
   }
 } 
 /* ANIMATIONS FOR THE "PROJECTS" TEXT GOING LEFT TO RIGHT */
-@keyframes moveProjectsL2R2 {
+@keyframes moveProjectsL2R1 {
   0% {
       transform: translateX(0%);
   }
@@ -369,13 +422,34 @@
       transform: translateX(100%);
   }
 } 
-
-/* ANIMATIONS FOR THE "PROJECTS" TEXT GOING RIGHT TO LEFT */
+/*  */
 @keyframes moveProjectsR2L {
   0% {
       transform: translateX(-100%);
   }
   100% {
+      transform: translateX(0%);
+  }
+} 
+
+/*  */
+
+/* ANIMATIONS FOR THE "PROJECTS" TEXT GOING RIGHT TO LEFT */
+@keyframes moveProjectsR2L1 {
+  0% {
       transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(0%);
+  }
+} 
+
+/* ANIMATIONS FOR THE "PROJECTS" TEXT GOING RIGHT TO LEFT */
+@keyframes moveProjectsR2L {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-100%);
   }
 } 

@@ -1,6 +1,6 @@
 :root {
-  --primaryColor: #1e2023;
-  --secondaryColor: rgb(79, 199, 255);
+  --Primary: hsl(20, 100%, 99%);
+  --navSecondary: rgb(32, 24, 20);
 }
 
 
@@ -30,19 +30,19 @@
   position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 8px 10%;
+  padding: 0px calc(10% - 8px);
+  margin: 8px;
   background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  background-color: var(--primaryColor);
-  box-shadow: 0px 2px 15px #000;
+  background-color: var(--Primary);
+  border: 2px solid var(--navSecondary);
 }
 .logo {
   font-size: 25px;
-  color: #fff;
+  color: #000000;
   padding: 8px 15px;
   text-decoration: none;
   font-weight: 600;
@@ -52,7 +52,7 @@
 }
 
 .navbar {
-  background: linear-gradient(hsl(216, 8%, 9%) 5%, hsl(216, 8%, 18%));
+  /* background: linear-gradient(hsl(216, 8%, 9%) 5%, hsl(216, 8%, 18%)); */
   border-radius: 30px;
   padding: 12px 15px;
 }
@@ -60,23 +60,20 @@
 .navbar a {
   display: inline-block;
   font-size: 18px;
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   font-weight: 500;
   margin: 0 10px;
   padding: 7px 20px;
-  transition: .3s;
   opacity: 0;
-  animation: slideTop .5s ease forwards;
+  animation: slideLeft .5s ease forwards;
   animation-delay: calc(.1s * var(--i));
-  border-radius: 17px;
 }
 .navbar a:hover {
-  background-color: var(--secondaryColor);
-  color: var(--primaryColor);
+  border-bottom: 4px solid var(--navSecondary);
 } 
 .navbar a.active {
-  color: var(--secondaryColor);
+  color: var(--navSecondary);
 }
 .navbar a:nth-of-type(1) {
   margin: 0 10px 0 0;
@@ -85,9 +82,15 @@
   margin: 0 0 0 10px;
 }
 .navbar a.active:hover {
-  color: var(--primaryColor);
+  color: var(--Primary);
 }
 
+/* END OF NAV */
+
+
+main {
+  background-color: hsl(20, 100%, 99%);
+}
 
 
 
