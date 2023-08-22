@@ -1,8 +1,3 @@
-
-
-
-
-
 :root {
   --primaryColor: #1e2023;
   --secondaryColor: rgb(79, 199, 255);
@@ -53,9 +48,11 @@
   font-weight: 600;
   cursor: default;
   animation: slideRight 1s ease forwards;
-  transition: all 1s;  /* IDK why this isn't getting a transition */
 }
-.logo:hover {
+.HillsBG {
+  transition: 1s ease;
+}
+.HillsBG:hover {
   background: url(./Images/JHillHills4.png);
   background-size: cover;
 }
@@ -200,6 +197,23 @@
   background-color: var(--primaryColor);
   color: #FFF;
   padding: 10px 10% 280px;
+}
+#skills h2, #skills p {
+  position: relative;
+  width: 820px;
+  transform: translate(calc(-50% - 55px), -50%);
+  top: 50%;
+  left: 50%;
+}
+#skills h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+#skills p {
+  line-height: 1.5em;
+  font-size: 1.2em;
+  /* font-weight: 600; */
 }
 
 /* SVG curve */
