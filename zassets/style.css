@@ -3,7 +3,6 @@
   --secondaryColor: rgb(79, 199, 255);
 }
 
-
 * {
   padding: 0;
   margin: 0;
@@ -15,6 +14,8 @@
   background-color: rgb(223, 16, 16);
   position: static;
   height: 69px;
+  z-index: 100000;
+  position: relative;  /* used so that z-index works ? */
 }
 #THISISAWORKINPROGRESS p {
   color: #FFF;
@@ -27,16 +28,15 @@
 
 
 #header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  left: 0;
+  left: 0;  /* should be able to delete this after the work in progress*/
   width: 100%;
   padding: 8px 10%;
-  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 100;
   background-color: var(--primaryColor);
   box-shadow: 0px 2px 15px #000;
 }
@@ -49,12 +49,28 @@
   cursor: default;
   animation: slideRight 1s ease forwards;
 }
+/* vvv this is the best thing I found for making the background:  change upon :hover */
 .HillsBG {
-  transition: 1s ease;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: transparent;
 }
-.HillsBG:hover {
-  background: url(./Images/JHillHills4.png);
+.HillsBG:before {
+  content: "J Hill";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  padding: 8px 15px;
+  background: url('./Images/JHillHills4.png') no-repeat center center;
   background-size: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.HillsBG:hover:before {
+  opacity: 1;
 }
 
 .navbar {
@@ -68,13 +84,12 @@
   font-size: 18px;
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
   margin: 0 10px;
   padding: 7px 20px;
   transition: .3s;
-  opacity: 0;
-  animation: slideTop .5s ease forwards;
-  animation-delay: calc(.1s * var(--i));
+  opacity: 0;  /* this is for the keyframe; so that it's starting position isn't visible right away */
+  animation: slideTop .5s ease forwards;  /* keyframe */
+  animation-delay: calc(.1s * var(--i));  
   border-radius: 17px;
 }
 .navbar a:hover {
@@ -84,33 +99,29 @@
 .navbar a.active {
   color: var(--secondaryColor);
 }
+.navbar a.active:hover {
+  color: var(--primaryColor);
+}
+/*  */
+/* vvv this is so that the ends of the nav are equally spaced around the whole curve when hovered */
 .navbar a:nth-of-type(1) {
   margin: 0 10px 0 0;
 }
 .navbar a:nth-of-type(4) {
   margin: 0 0 0 10px;
 }
-.navbar a.active:hover {
-  color: var(--primaryColor);
-}
+/* ^^^ this one too */
 
 
 
 
 .home {
-  position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
   background: var(--primaryColor);
   align-items: center;
   justify-content: center;
   padding: 100px 10% 550px;
   color: #fff;
-}
-.home2 {
-  padding: 146px 0 232px;
-  align-items: center;
 }
 
 .home-content {
@@ -195,28 +206,32 @@
 
 #skills {
   background-color: var(--primaryColor);
-  color: #FFF;
-  padding: 10px 10% 280px;
+  padding: 10px 20% 280px;
 }
 #skills h2, #skills p {
+  color: #FFF;
   position: relative;
   width: 820px;
-  transform: translate(calc(-50% - 55px), -50%);
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
 }
 #skills h2 {
   text-align: center;
   font-size: 36px;
-  margin-bottom: 10px;
 }
 #skills p {
+  margin-top: 10px;
   line-height: 1.5em;
   font-size: 1.2em;
-  /* font-weight: 600; */
 }
 
-/* SVG curve */
+#skillsLogos {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* SVG curve from https://www.shapedivider.app/ */
 .curve {
   position: relative;
   top: 0;
@@ -251,6 +266,7 @@
   background-color: #000;
 }
 #projectH2SlideIn {
+  position: relative;
   overflow: hidden;
   white-space: nowrap;
   color: #FFF;
@@ -258,9 +274,10 @@
   top: -120px;
   font-size: 56px;
   animation: moveProjectsL2R 60s linear infinite;
-
+  
 }
 #projectH2SlideOut {
+  position: relative;
   overflow: hidden;
   white-space: nowrap;
   color: #FFF;
@@ -300,6 +317,10 @@
 
 /* END OF ANIMATED TEXT */
 
+
+/*  */
+/* vv NEED TO USE AN ACTUAL GRID vv */
+/*  */
 #projectsGrid {
   padding: 10px 1%;
   display: flex;
@@ -309,6 +330,7 @@
 #featuredRow {
   display: flex;
   justify-content: space-between;
+  margin: 5px 0;
 }
 #featuredRow p, h3 {
   color: #FFF;
@@ -326,6 +348,24 @@
   padding: 10px;
   background-color: rgb(255, 255, 255);
 }
+
+#recents {
+  display: flex;
+  margin: 5px 0;
+}
+#recents img {
+  width: 49%;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
 
 
 
