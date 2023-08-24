@@ -15,6 +15,10 @@ body {  /* This is used so that there is nothing that will have the user scroll 
   overflow-y: auto;
 }
 
+main {
+  background-color: var(--primaryColor);
+}
+
 #THISISAWORKINPROGRESS {
   background-color: rgb(223, 16, 16);
   position: static;
@@ -125,7 +129,7 @@ body {  /* This is used so that there is nothing that will have the user scroll 
   background: var(--primaryColor);
   align-items: center;
   justify-content: center;
-  padding: 180px 10% 550px;
+  padding: 180px 10%;
   color: #fff;
 }
 
@@ -205,13 +209,30 @@ body {  /* This is used so that there is nothing that will have the user scroll 
   box-shadow: 0 0 20px var(--secondaryColor);
 }
 
-
 /* END OF HOME PAGE */
+
+
+
+#aboutMe {
+  background-color: #c07d00;
+  color: #FFF;
+  margin: 50px 10%;
+  border-top: 5px #000 solid;
+  border-left: 5px #000 solid;
+  border-right: 5px #000 solid;
+  height: 700px;
+  padding: 20px;
+}
+#endOrange {
+  background: linear-gradient(#c07d00, var(--primaryColor));
+}
+
+/* END OF ABOUT ME */
 
 
 #skills {
   background-color: var(--primaryColor);
-  padding: 10px 20% 150px;
+  padding: 170px 20%;
 }
 #skills h2, #skills p {
   color: #FFF;
@@ -279,7 +300,6 @@ body {  /* This is used so that there is nothing that will have the user scroll 
   top: -120px;
   font-size: 56px;
   animation: moveProjectsL2R 60s linear infinite;
-  
 }
 #projectH2SlideOut {
   position: relative;
@@ -290,7 +310,6 @@ body {  /* This is used so that there is nothing that will have the user scroll 
   top: -217px;
   font-size: 56px;
   animation: moveProjectsL2R1 60s linear infinite;
-
 }
 
 #projectH2SlideIn1 {
@@ -301,7 +320,6 @@ body {  /* This is used so that there is nothing that will have the user scroll 
   top: -220px;
   font-size: 56px;
   animation: moveProjectsR2L 60s linear infinite;
-
 }
 #projectH2SlideOut1 {
   overflow: hidden;
@@ -311,7 +329,6 @@ body {  /* This is used so that there is nothing that will have the user scroll 
   top: -317px;
   font-size: 56px;
   animation: moveProjectsR2L1 60s linear infinite;
-
 }
 /*  */
 .projH2Outline {
@@ -323,53 +340,35 @@ body {  /* This is used so that there is nothing that will have the user scroll 
 /* END OF ANIMATED TEXT */
 
 
-/*  */
-/* vv NEED TO USE AN ACTUAL GRID vv */
-/*  */
-#projectsGrid {
-  padding: 0px 1% 50px;
-  display: flex;
-  flex-direction: column;
-}
-
-#h3sGrid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 50px;
-  color: #FFF;
-}
-
-
-#topCard {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 20px;
-  margin-bottom: 20px;
-}
-#topCard img {
-  height: 570px;
-  padding: 10px;
-  background-color: rgb(255, 255, 255);
-
-}
-
-#p50Projects {
+#cardsGrid {
+  padding: 50px 1%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
 
 .card {
-  background-color: rgb(255, 255, 255);
+  background-color: #a8a8a8;
   padding: 10px;
-  box-sizing: border-box;
-}
-.card img {
-  width: 900px;
+  border-radius: 14px;
 }
 
+.flex {
+  display: flex;
+}
+.flex img {
+  height: 300px;
+  border-radius: 14px;
+}
 
-
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+.flexCol h3 {
+  text-align: center;
+  width: 100%;
+}
 
 
 
@@ -393,11 +392,31 @@ body {  /* This is used so that there is nothing that will have the user scroll 
 /* END OF PROJECTS */
 
 
-#aboutMe {
-  background-color: var(--primaryColor);
-  color: #FFF;
-  padding: 50px 10%;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

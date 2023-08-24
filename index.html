@@ -40,6 +40,46 @@
         <a target="_blank" href="https://www.facebook.com/profile.php?id=100009071997290" style="--i:10;"><i class='bx bxl-facebook'></i></a>
       </div>
     </section>
+    
+    <section id="aboutMe">
+      <h2>About Me</h2>
+      <p>I have a passion for web development with a love for creating designs and intuitive user experiences. Through 3 years of an artsy major in college, and 1 year in a coding bootcamp, I've been able to envision what I want to design, and create it. <br>Welcome to my online space where I showcase my work, share insights, and connect with like-minded individuals.
+      </p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p>.</p>
+      <p id="endOrange">.
+        <br>.
+        <br>.
+        <br>.
+        <br>.
+        <br>.
+        <br>.
+        <br>.
+        <br>.
+        <br>.
+        <br>.
+        <br>.
+        <br>.
+      </p>
+    </section>
 
     <div id="bgBlack">
       <section id="skills">
@@ -79,38 +119,51 @@
         </div>
       </div>
     </div>
-    <div id="projectsGrid">
-      <div id="h3sGrid">
-        <h3>Featured:</h3>
-        <h3>Shop:</h3>
-      </div>
-      <div id="topCard">
-        <a href="https://peterjanasz.github.io/Recipe-Finder-App/" target="_blank">
-        <img src="./zassets/Images/Projects/FoodMakerApp.png" alt="Image of first group project made in bootcamp">
-        </a>
-        <a href="https://github.com/JoshHill1/PASS_Project" target="_blank">
-        <img src="./zassets/Images/Projects/PlainAndSimpleForWebProjInvertedColor.png" alt="Plain And Simple Project.">
-        </a>
-      </div>
-      <div id="p50Projects">
-        <div class="card">
-          <a href="https://github.com/JoshHill1/JapanBlog" target="_blank">
-          <img src="./zassets/Images/Projects/JJapanBlog.png" alt="Personal blog made on my experience in Japan.">
+
+    <div id="cardsGrid">
+      <div class="card">
+        <div class="flex"> <!-- make a more descriptive class name. -->
+          <a href="https://peterjanasz.github.io/Recipe-Finder-App/" target="_blank">
+            <img src="./zassets/Images/Projects/FoodMakerApp.png" alt="">
           </a>
+          <div class="flexCol">
+            <h3>*TITLE*</h3>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+          </div>
         </div>
-        <!-- <div class="card">
-          <a href="" target="_blank">
-          <img src="" alt=" ">
-          </a> -->
-        </div>
+        <p>*Description*</p>
       </div>
-    </section>
+      
+      <div class="card">
+        <div class="flex">
+          <a href="https://github.com/JoshHill1/PASS_Project" target="_blank">
+            <img src="./zassets/Images/Projects/PlainAndSimpleForWebProjInvertedColor.png" alt="">
+          </a>
+          <div class="flexCol">
+            <h3>*TITLE*</h3>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+          </div>
+        </div>
+        <p>*Description*</p>
+      </div>
+      
+      <div class="card">
+        <div class="flex">
+          <a href="https://github.com/JoshHill1/JapanBlog" target="_blank">
+            <img src="./zassets/Images/Projects/JJapanBlog.png" alt="">
+          </a>
+          <div class="flexCol">
+            <h3>*TITLE*</h3>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+          </div>
+        </div>
+        <p>*Description*</p>
+      </div>
+    </div>
 
-
-    <section id="aboutMe">
-      <h2>About Me</h2>
-      <p>I went into college not exactly knowing what I wanted to pursue. I had an intro class to web development class in my second year at ASU, and enjoyed learning about different HTML tags and learning CSS and what web designs I could come up with. The classes those following semesters weren't set up well. After some thinking and conversations with my parents, I pursued a gap year where I took a coding bootcamp that has allowed me to learn majority of what I put on this website.</p>
-    </section>
     
     
     <!-- JAVASCRIPT CODE FILE LOCATION -->
@@ -118,7 +171,32 @@
     <script src="./zassets/script.js"></script>
   </main>
   <footer>
-    
+    <!-- Change the class names -->
+    <div class="flexCol">
+      <div class="flex">
+        <div class="flexCol">
+          <p>Description of what the About page has. 50%, left of the screen</p>
+          <button><a href="./navLinks/About/about.html">About</a></button>
+        </div>
+        <div class="flexCol">
+          <p>Description of what the About page has. 50%, left of the screen</p>
+          <button><a href="./navLinks/Projects/projects.html">Projects</a></button>
+        </div>
+      </div>
+      <div class="flex">
+        <p>Contact:</p>
+        <div class="flexCol">
+          <div class="flex">
+            <li><a href="">LinkedIn</a></li>
+            <li><a href="">GitHub</a></li>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">LinkTree</a></li>
+          </div>
+          <p>email</p>
+        </div>
+      </div>
+    </div>
+    <p>&copy;2023 Joshua Hill</p>
   </footer>
   <script src="./script.js"></script>
 </body>
