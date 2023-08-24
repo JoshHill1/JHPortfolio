@@ -22,6 +22,7 @@
       </nav>
     </div>
   </header>
+
   <main>
     <section class="home">
       <div class="home-content">
@@ -170,33 +171,38 @@
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> <!-- Link used to use battboldt's JS file called typed.js -->
     <script src="./zassets/script.js"></script>
   </main>
+
+  <div class="spacer layer1"></div>
+
   <footer>
-    <!-- Change the class names -->
-    <div class="flexCol">
-      <div class="flex">
-        <div class="flexCol">
-          <p>Description of what the About page has. 50%, left of the screen</p>
-          <button><a href="./navLinks/About/about.html">About</a></button>
-        </div>
-        <div class="flexCol">
-          <p>Description of what the About page has. 50%, left of the screen</p>
-          <button><a href="./navLinks/Projects/projects.html">Projects</a></button>
-        </div>
-      </div>
-      <div class="flex">
-        <p>Contact:</p>
-        <div class="flexCol">
-          <div class="flex">
-            <li><a href="">LinkedIn</a></li>
-            <li><a href="">GitHub</a></li>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">LinkTree</a></li>
+    <div id="footerContent">
+      <!-- Change the class names -->
+      <div class="flexFooterCol">
+        <div id="abProjGap">
+          <div class="footerPDescription">
+            <p>Description of what the About page has. 50%, left of the screen. Description of what the About page has. 50%, left of the screen. Description of what the About page has. 50%, left of the screen. Description of what the About page has. 50%, left of the screen.</p>
+            <a href="./navLinks/About/about.html">About</a>
           </div>
-          <p>email</p>
+          <div class="footerPDescription">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut explicabo unde sequi dicta velit, porro corporis, odit veritatis aspernatur magnam reiciendis culpa accusantium repellat dolorum quibusdam earum aliquid! Autem, officia this needs to be equal lines as the other one.</p>
+            <a href="./navLinks/Projects/projects.html">Projects</a>
+          </div>
+        </div>
+        <div id="footerContact">
+          <p style="font-size: 40px; font-weight: 900; width: 500px; text-align: center;">Contact:</p>
+          <div id="contactFooterColInfo">
+            <div id="flexFooterContactLinks">
+              <li><a href="https://www.linkedin.com/in/joshuahillaz0d/" target="_blank">LinkedIn</a></li>
+              <li><a href="https://github.com/JoshHill1" target="_blank">GitHub</a></li>
+              <li><a href="https://www.instagram.com/josh_hil1/" target="_blank">Instagram</a></li>
+              <li><a href="#" target="_blank">LinkTree</a></li>
+            </div>
+            <p id="footerContactEmail">jjhi11240@gmail.com</p>
+          </div>
         </div>
       </div>
     </div>
-    <p>&copy;2023 Joshua Hill</p>
+    <p id="Copy">&copy;2023 Joshua Hill</p>
   </footer>
   <script src="./script.js"></script>
 </body>

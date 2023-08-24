@@ -1,6 +1,7 @@
 :root {
   --primaryColor: #1e2023;
   --secondaryColor: rgb(79, 199, 255);
+  --accent: hsl(199, 79%, 90%);
 }
 
 * {
@@ -348,7 +349,9 @@ main {
 }
 
 .card {
-  background-color: #a8a8a8;
+  background-color: hsla(216, 35%, 10%, 0.5);
+  backdrop-filter: blur(40px);
+  border: 1px var(--accent) solid;
   padding: 10px;
   border-radius: 14px;
 }
@@ -373,10 +376,6 @@ main {
 
 
 
-
-
-
-
 /* !!!! */
 /* !!!! */
 /* Have this class be added when the img is being hovered */
@@ -391,35 +390,122 @@ main {
 
 /* END OF PROJECTS */
 
+/* https://app.haikei.app/ */
+.spacer {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #000;
+}
+
+.layer1 {
+  background-image: url(./layer1.svg);
+}
+
+/* END OF FOOTER SVG */
 
 
 
+footer {
+  background-color: var(--primaryColor);
+}
+footer #Copy {
+  color: #fff;
+  text-align: center;
+  background-color: #282B2F;
+  padding: 8px 0 10px;
+}
 
+#footerContent {
+  background-color: var(--primaryColor);
+  color: var(--accent);
+  padding: 30px 1% 0;
+}
+#footerContent p {
+  background-color: var(--primaryColor);
+}
 
+#abProjGap {
+  margin: 10px 0 30px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.footerPDescription {
+  padding: 20px;
+  width: 930px;
+  text-align: center;
+}
+#footerContent .footerPDescription p {
+  padding-bottom: 10px;
+  background-color: #282B2F;
+  border: 10px #232529 solid;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+.footerPDescription a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--secondaryColor);
+  text-shadow: 0px 0px 10px var(--secondaryColor);
+  border: 1px var(--secondaryColor) solid;
+  padding: 10px 50px;
+  border-radius: 14px;
+  background-color: var(--primaryColor);
+  box-shadow: 0 0 10px 1px rgba(79, 199, 255, 0.5);
+  transition: box-shadow, color, background-color,  0.3s;
+  letter-spacing: 0.065em;
+}
+.footerPDescription a:hover {
+  box-shadow: 0 0 30px 0px var(--secondaryColor);
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  text-shadow: none;
+  font-weight: 600;
+  letter-spacing: 0.0em;
+  padding: 10px 52px;
+}
 
+/*  */
 
+#footerContact{
+  margin: 80px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#footerContact p {
+  font-weight: 500;
+  padding: 0;
+}
 
+#contactFooterColInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
 
+#flexFooterContactLinks {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  list-style-type: none;
+}
+#flexFooterContactLinks li a {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0px 3px 4px;
+  transition: 0.1s;
+}
+#flexFooterContactLinks a:hover{
+  border-bottom: 5px var(--accent) solid;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* END OF FOOTER */
 
 
 /* KEYFRAME ANIMATIONS */
