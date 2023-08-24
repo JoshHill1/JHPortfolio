@@ -10,6 +10,11 @@
   font-family: sans-serif;
 }
 
+body {  /* This is used so that there is nothing that will have the user scroll right or left. It's purpose came from the animated PROJECTS text. */
+  overflow: hidden;
+  overflow-y: auto;
+}
+
 #THISISAWORKINPROGRESS {
   background-color: rgb(223, 16, 16);
   position: static;
@@ -120,7 +125,7 @@
   background: var(--primaryColor);
   align-items: center;
   justify-content: center;
-  padding: 100px 10% 550px;
+  padding: 180px 10% 550px;
   color: #fff;
 }
 
@@ -206,7 +211,7 @@
 
 #skills {
   background-color: var(--primaryColor);
-  padding: 10px 20% 280px;
+  padding: 10px 20% 150px;
 }
 #skills h2, #skills p {
   color: #FFF;
@@ -322,41 +327,45 @@
 /* vv NEED TO USE AN ACTUAL GRID vv */
 /*  */
 #projectsGrid {
-  padding: 10px 1%;
+  padding: 0px 1% 50px;
   display: flex;
   flex-direction: column;
 }
 
-#featuredRow {
-  display: flex;
-  justify-content: space-between;
-  margin: 5px 0;
-}
-#featuredRow p, h3 {
+#h3sGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 50px;
   color: #FFF;
-  text-decoration: underline;
 }
 
-#feat60Percent img {
+
+#topCard {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+#topCard img {
   height: 570px;
   padding: 10px;
   background-color: rgb(255, 255, 255);
+
 }
 
-#feat40Percent img {
-  height: 570px;
-  padding: 10px;
-  background-color: rgb(255, 255, 255);
+#p50Projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }
 
-#recents {
-  display: flex;
-  margin: 5px 0;
-}
-#recents img {
-  width: 49%;
-  padding: 10px;
+.card {
   background-color: rgb(255, 255, 255);
+  padding: 10px;
+  box-sizing: border-box;
+}
+.card img {
+  width: 900px;
 }
 
 
@@ -387,7 +396,7 @@
 #aboutMe {
   background-color: var(--primaryColor);
   color: #FFF;
-  padding: 10px 10%;
+  padding: 50px 10%;
 }
 
 
