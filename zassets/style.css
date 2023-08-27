@@ -215,7 +215,7 @@ main {
 
 
 #aboutMe {
-  background-color: #c07d00;
+  background-color: #f3961b;
   color: #FFF;
   margin: 50px 10%;
   border-top: 5px #000 solid;
@@ -225,7 +225,7 @@ main {
   padding: 20px;
 }
 #endOrange {
-  background: linear-gradient(#c07d00, var(--primaryColor));
+  background: linear-gradient(#f99c21, var(--primaryColor));
 }
 
 /* END OF ABOUT ME */
@@ -235,19 +235,27 @@ main {
   background-color: var(--primaryColor);
   padding: 170px 20%;
 }
-#skills h2, #skills p {
+#skills h2 {
+  color: #FFF;
+  text-shadow: 0 0 12px #FFF, 0 0 50px #7118ff, 0 0 115px #7118ff, 0 0 125px #7118ff;
+  font-size: 60px;
+  /* position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%; */
+  padding-bottom: 140px;
+  text-align: center;
+}
+#skills p {
   color: #FFF;
   position: relative;
   width: 820px;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-}
-#skills h2 {
-  text-align: center;
-  font-size: 36px;
-}
-#skills p {
+  padding: 20px;
+  border: 2px rgba(41, 40, 47, 0.08) inset;
+  
   margin-top: 10px;
   line-height: 1.5em;
   font-size: 1.2em;
@@ -346,48 +354,57 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+  color: #FFF;
 }
 
 .card {
-  background-color: hsla(216, 35%, 10%, 0.5);
+  background-color: hsla(216, 35%, 12%, 0.5);
   backdrop-filter: blur(40px);
   border: 1px var(--accent) solid;
   padding: 10px;
   border-radius: 14px;
 }
+.card p {
+  padding: 10px 3px 2px;
+}
 
-.flex {
+.titleLinksAndPic {
   display: flex;
 }
-.flex img {
+.titleLinksAndPic img {
   height: 300px;
   border-radius: 14px;
 }
 
-.flexCol {
+.titleAndLinks {
   display: flex;
   flex-direction: column;
-}
-.flexCol h3 {
-  text-align: center;
   width: 100%;
 }
-
-
-
-
-/* !!!! */
-/* !!!! */
-/* Have this class be added when the img is being hovered */
-.displayProjText img {
-  opacity: 0.75;
+.titleAndLinks h3 {
+  text-align: center;
+  padding: 40px 0;
 }
-/* !!!! */
-/* !!!! */
-/* !!!! */
-
-
-
+.titleAndLinks a {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 1000px; */
+  margin: 10px 60px;
+  padding: 10px 20px;
+  background-color: var(--secondaryColor);
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--primaryColor);
+  /* box-shadow: 0px 0px 3px var(--secondaryColor); */
+  transition: 01s ease;
+}
+.titleAndLinks a:hover {
+  box-shadow: 0px 0px 20px 1px var(--secondaryColor);
+  transition: 0.3s ease;
+}
 /* END OF PROJECTS */
 
 /* https://app.haikei.app/ */
@@ -405,7 +422,6 @@ main {
 }
 
 /* END OF FOOTER SVG */
-
 
 
 footer {
@@ -499,10 +515,14 @@ footer #Copy {
   color: var(--accent);
   text-decoration: none;
   padding: 0px 3px 4px;
-  transition: 0.1s;
+  transition: 0.1s ease;
+  border-left: 5px var(--primaryColor) solid;
+  border-right: 5px var(--primaryColor) solid;
 }
 #flexFooterContactLinks a:hover{
-  border-bottom: 5px var(--accent) solid;
+  border-bottom: 3px var(--accent) inset;
+  border-left: 5px var(--primaryColor) solid;
+  border-right: 5px var(--primaryColor) solid;
 }
 
 /* END OF FOOTER */
