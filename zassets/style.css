@@ -130,7 +130,7 @@ main {
   background: var(--primaryColor);
   align-items: center;
   justify-content: center;
-  padding: 180px 10%;
+  padding: 180px 10% 330px;
   color: #fff;
 }
 
@@ -214,18 +214,13 @@ main {
 
 
 
-#aboutMe {
-  background-color: #f3961b;
-  color: #FFF;
+#aboutMe img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 1500px; */
   margin: 50px 10%;
-  border-top: 5px #000 solid;
-  border-left: 5px #000 solid;
-  border-right: 5px #000 solid;
-  height: 700px;
-  padding: 20px;
-}
-#endOrange {
-  background: linear-gradient(#f99c21, var(--primaryColor));
+  width: 1500px;
 }
 
 /* END OF ABOUT ME */
