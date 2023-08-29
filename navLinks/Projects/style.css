@@ -1,8 +1,7 @@
 :root {
-  --Primary: hsl(20, 100%, 99%);
+  --Primary: hsl(20, 40%, 98%);
   --navSecondary: rgb(32, 24, 20);
 }
-
 
 * {
   padding: 0;
@@ -32,7 +31,7 @@
   left: 0;
   padding: 0px calc(10% - 8px);
   margin: 8px;
-  background: transparent;
+  background-color: var(--Primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,9 +114,12 @@
 /* END OF NAV */
 
 
+body {
+  background-color: var(--Primary);
+}
 main {
-  background-color: hsl(0, 100%, 99%);
-  margin: 0 8px;
+  background-color: var(--Primary);
+  padding: 0 8px;
 }
 
 #h1Proj {
@@ -130,6 +132,7 @@ main {
 #topGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-bottom: 100px;
 }
 
 
@@ -138,9 +141,14 @@ main {
   flex-direction: column;
 }
 
+#flex p {
+  padding: 4px 20px 18px 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
 #flex img {
   width: 900px;
-  height: 500px;
 }
 
 
@@ -166,7 +174,22 @@ main {
   margin: 4px 0;
 }
 
+.swoop-element {
+  transform: translateX(-100%); /* Initially set off-screen */
+  transition: transform 02s ease-in-out; /* Animation effect */
+  width: 150px;
+  background-color: #007BFF;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
 
+.swoop-in {
+  transform: translateX(0); /* Bring it into frame */
+}
+.swoop-out {
+  transform: translateX(-100%);
+}
 
 
 /* KEYFRAME ANIMATIONS */
