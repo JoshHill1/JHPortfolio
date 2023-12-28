@@ -130,7 +130,7 @@ main {
   background: var(--primaryColor);
   align-items: center;
   justify-content: center;
-  padding: 180px 10% 330px;
+  padding: 280px 10% 330px;
   color: #fff;
 }
 
@@ -256,15 +256,16 @@ main {
   font-size: 1.2em;
 }
 
-#skillsLogos {
-  display: flex;
-  justify-content: space-between;
+.skillsList ul {
+  color: #FFF;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 /* SVG curve from https://www.shapedivider.app/ */
 .curve {
   position: relative;
-  top: 0;
+  top: 90px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -276,22 +277,16 @@ main {
   position: relative;
   display: block;
   width: calc(275% + 1.3px);
-  height: 172px;
+  height: 102px;
 }
 .curve .shape-fill {
   fill: var(--primaryColor);
-}
-/* Making the background of the curve black so that the "Project" text can be behind the curve */
-#bgBlack {
-  background-color: #000;
 }
 
 /* END OF SKILLS */
 
 
 /* Here, projectH2SlideIn and projectH2SlideOut are on two different lines. In order to have projectH2SlideOut aligned with projectH2SlideIn, you have to make it go up 97px */
-
-/*  Fix the overflow!!!  */
 #projects {
   background-color: #000;
 }
@@ -301,7 +296,7 @@ main {
   white-space: nowrap;
   color: #FFF;
   position: relative;
-  top: -120px;
+  /* top: -120px; */
   font-size: 56px;
   animation: moveProjectsL2R 60s linear infinite;
 }
@@ -311,7 +306,8 @@ main {
   white-space: nowrap;
   color: #FFF;
   position: relative;
-  top: -217px;
+  top: -100px;
+  /* top: -217px; */
   font-size: 56px;
   animation: moveProjectsL2R1 60s linear infinite;
 }
@@ -321,7 +317,7 @@ main {
   white-space: nowrap;
   color: #FFF;
   position: relative;
-  top: -220px;
+  top: -120px;
   font-size: 56px;
   animation: moveProjectsR2L 60s linear infinite;
 }
@@ -330,7 +326,7 @@ main {
   white-space: nowrap;
   color: #FFF;
   position: relative;
-  top: -317px;
+  top: -217px;
   font-size: 56px;
   animation: moveProjectsR2L1 60s linear infinite;
 }
@@ -368,7 +364,7 @@ main {
 }
 .titleLinksAndPic img {
   height: 300px;
-  border-radius: 14px;
+  border-radius: 7px;
 }
 
 .titleAndLinks {

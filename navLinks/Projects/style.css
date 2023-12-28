@@ -81,6 +81,7 @@
 }
 
 .navbar a {
+  /* cursor:alias; */
   display: inline-block;
   font-size: 18px;
   color: #000000;
@@ -107,9 +108,7 @@
 .navbar a:nth-of-type(4) {
   margin: 0 0 0 10px;
 }
-/* .navbar a.active:hover {
-  color: var(--Primary);
-} */
+
 
 /* END OF NAV */
 
@@ -136,18 +135,18 @@ main {
 }
 
 
-#flex {
+.flexCol {
   display: flex;
   flex-direction: column;
 }
 
-#flex p {
-  padding: 4px 20px 18px 0;
+#mainSection p {
+  padding: 3px 30px 18px 0;
   font-weight: 600;
   font-size: 18px;
 }
 
-#flex img {
+#mainSection img {
   width: 900px;
 }
 
@@ -174,22 +173,43 @@ main {
   margin: 4px 0;
 }
 
-.swoop-element {
-  transform: translateX(-100%); /* Initially set off-screen */
-  transition: transform 02s ease-in-out; /* Animation effect */
-  width: 150px;
-  background-color: #007BFF;
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
+
+.flexSection {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 5px 0;
+  margin: 15px 0;
+  display: flex;
 }
 
-.swoop-in {
-  transform: translateX(0); /* Bring it into frame */
+
+.processes {
+  display: none;
 }
-.swoop-out {
-  transform: translateX(-100%);
+.processes.active {
+  display: block;
 }
+
+.processes p {
+  padding: 10px;
+}
+
+.processes img {
+  width: 600px;
+  height: auto;
+  transition: 0.3s ease;
+}
+.processes img:hover {
+  width: 1000px;
+  height: auto;
+}
+
+
+
+
+
+
+
 
 
 /* KEYFRAME ANIMATIONS */
@@ -253,4 +273,3 @@ main {
     opacity: 1;
   }
 }
-
