@@ -1,6 +1,7 @@
 :root {
   --primaryColor: #1e2023;
   --secondaryColor: rgb(79, 199, 255);
+  --accent: rgb(192, 235, 255);
 }
 
 
@@ -10,20 +11,6 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-
-#THISISAWORKINPROGRESS {
-  background-color: rgb(223, 16, 16);
-  position: static;
-  height: 69px;
-}
-#THISISAWORKINPROGRESS p {
-  color: #FFF;
-  text-align: center;
-  font-size: 16px;
-  font-family: sans-serif;
-  padding: 25px 5px;
-}
-
 
 
 #header {
@@ -110,6 +97,47 @@
 }
 .navbar a.active:hover {
   color: var(--primaryColor);
+}
+
+
+body {
+  background-color: var(--primaryColor);
+}
+
+/* Targets the positioning of where all the links are placed */
+main #links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Targets each individual list of links */
+#links ul li {
+  list-style-type: none;
+  backdrop-filter: blur(40px);
+  border: 1px solid var(--accent);
+  border-radius: 32px;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  /* width: 50vw; */
+}
+
+/* Targets what is inside of the lists like the a tag links and the i tag that displays the logo */
+#links ul li a {
+  padding: 10px 333px;
+  color: var(--secondaryColor);
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: 600;
+  border-radius: 50000px;
+  border: 1px solid hsla(214, 10%, 15%, 0.4);
+}
+
+/* Targets the i tag */
+#links a i {
+  padding-right: 10px;
 }
 
 
