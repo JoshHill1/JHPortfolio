@@ -10,7 +10,7 @@ const imgDisplay = document.querySelector('#imgDisplay')
 const PProjDisplay = '../../zassets/READMEimg/Screenshot2023-08-22PPF.png';
 const foodMakerProjDisplay = '../../zassets/Images/Projects/FoodMakerApp.png';
 const JapanBlogProjDisplay = '../../zassets/Images/Projects/JJapanBlog.png';
-const PASSProjDisplay = '../../zassets/Images/Projects/PlainAndSimpleForWebProjInvertedColor.png';
+const PASSProjDisplay = '../../zassets/Images/Projects/PlainAndSimpleFINAL.png';
 
 document.addEventListener("DOMContentLoaded", () => {
   // Check if there's saved content in localStorage

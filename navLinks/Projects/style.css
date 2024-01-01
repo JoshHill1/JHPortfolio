@@ -190,7 +190,9 @@ main {
   height: auto;
 }
 
-
+#PASBeforeANDAfter img {
+  width: calc(98vw/2);
+}
 
 
 
