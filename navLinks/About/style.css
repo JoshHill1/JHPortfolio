@@ -1,15 +1,8 @@
 :root {
-  --nav: hsl(34, 78%, 91%);
-  --navSecondary: hsl(34, 24%, 55%);
-
-  --primaryColor: antiquewhite;
-  --secondaryColor: hsl(40, 14%, 4%);
-
-  
-  
+  --primaryColor: #1e2023;
+  --secondaryColor: rgb(79, 199, 255);
+  --accent: hsl(199, 79%, 90%);
 }
-
-/* padding: 20px 15% */
 
 * {
   padding: 0;
@@ -18,53 +11,32 @@
   font-family: sans-serif;
 }
 
-#THISISAWORKINPROGRESS {
-  background-color: rgb(130, 77, 77);
-  position: static;
-}
-#THISISAWORKINPROGRESS p {
-  color: #FFF;
-  text-align: center;
-  font-size: 160px;
-  font-family: sans-serif;
-  padding: 150px 5px;
-}
-
-
-
-
 body {
-  background-color: var(--primaryColor);
   overflow: hidden;
+  overflow-y: auto;
 }
 
 #header {
-  position: sticky;
-  top: 0;
-  left: 0;
+  position: fixed;
   width: 100%;
   padding: 8px 10%;
-  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
-  background-color: var(--nav);
-  border-bottom: 3px solid var(--navSecondary);
+  z-index: 100;
+  background-color: var(--primaryColor);
+  box-shadow: 0px 2px 15px #000;
 }
-#header a {
-  color: #FFF;
-  text-decoration: none;
-}
-#header h1 .logo {
+.logo {
   font-size: 25px;
+  color: #fff;
   padding: 8px 15px;
+  text-decoration: none;
   font-weight: 600;
   cursor: default;
-  opacity: 0;
-  color: #000;
   animation: slideRight 1s ease forwards;
 }
+
 .HillsBG {
   position: relative;
   width: 300px;
@@ -79,7 +51,7 @@ body {
   left: 50%;
   width: 60px;
   padding: 8px 15px;
-  background: url('../../zassets/Images/JHillHills4.png') no-repeat center center;
+  background: url('./Images/JHillHills4.png') no-repeat center center;
   background-size: cover;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -89,235 +61,81 @@ body {
 }
 
 .navbar {
+  background: linear-gradient(hsl(216, 8%, 9%) 5%, hsl(216, 8%, 18%));
+  border-radius: 30px;
   padding: 12px 15px;
 }
-/*  */
-#header .navbar a {
+
+.navbar a {
   display: inline-block;
   font-size: 18px;
-  color: var(--secondaryColor);
-  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
   margin: 0 10px;
   padding: 7px 20px;
   transition: .3s;
-  opacity: 0;
-  animation: slideTop .5s ease forwards;
-  animation-delay: calc(.1s * var(--i));
+  opacity: 0;  /* this is for the keyframe; so that it's starting position isn't visible right away */
+  animation: slideTop .5s ease forwards;  /* keyframe */
+  animation-delay: calc(.1s * var(--i));  
+  border-radius: 17px;
 }
 .navbar a:hover {
-  border-bottom: 8px solid var(--secondaryColor);
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
 } 
-.navbar a#active {
-  border-bottom: 8px solid var(--secondaryColor);
+.navbar a.active {
+  color: var(--secondaryColor);
 }
+.navbar a.active:hover {
+  color: var(--primaryColor);
+}
+
 .navbar a:nth-of-type(1) {
   margin: 0 10px 0 0;
 }
 .navbar a:nth-of-type(4) {
   margin: 0 0 0 10px;
 }
-/* .navbar a#active:hover {
-  color: var(--primaryColor);
-} */
+/* End of header */
 
-
-/* END OF HEADER */
-
-.heroSection {
-  background-color: var(--primaryColor); /* change to an image when you have it */
-  /* background: ; */
-  padding: var(--wrapped);
-  padding: 20px 15%;
-  height: 1000px; /* and then fix me */
-}
-
-
-/* ABOUT */
-#aboutFloatingLink {
-  display: block;
-  width: 360px;
-  height: 200px;
-  background-color: #f5f5f5;
-  border: 1px solid #e0e0e0;
-  position: absolute;
-  top: 245px;
-  left: 160px;
-  text-align: center;
-  line-height: 200px; /* This is to vertically center the text inside the box */
-  text-decoration: none; /* Removes the underline from the link */
-  color: #333;
-  font-family: Arial, sans-serif;
-  transition:  0.3s ease; /* For hover effect */
-}
-#aboutFloatingLink:hover {
-  background-color: #e0e0e0;
-  transform: translate(-14px, -12px);
-  box-shadow: 14px 12px 0px rgba(0, 0, 0);
-}
-
-
-/* PORTFOLIO */
-#portfolioFloatingLink {
-  display: block;
-  width: 360px;
-  height: 200px;
-  background-color: #f5f5f5;
-  border: 1px solid #e0e0e0;
-  position: absolute;
-  top: 305px;
-  right: 420px;
-  text-align: center;
-  line-height: 200px; /* This is to vertically center the text inside the box */
-  text-decoration: none; /* Removes the underline from the link */
-  color: #333;
-  font-family: Arial, sans-serif;
-  transition:  0.3s ease; /* For hover effect */
-}
-#portfolioFloatingLink:hover {
-  background-color: #e0e0e0;
-  transform: translate(-14px, -12px);
-  box-shadow: 14px 12px 0px rgba(0, 0, 0);
-}
-
-
-/* CONTACT */
-#contactFloatingLink {
-  display: block;
-  width: 360px;
-  height: 200px;
-  background-color: #f5f5f5;
-  border: 1px solid #e0e0e0;
-  position: absolute;
-  top: 710px;
-  left: 250px;
-  text-align: center;
-  line-height: 200px; /* This is to vertically center the text inside the box */
-  text-decoration: none; /* Removes the underline from the link */
-  color: #333;
-  font-family: Arial, sans-serif;
-  transition:  0.3s ease; /* For hover effect */
-}
-#contactFloatingLink:hover {
-  background-color: #e0e0e0;
-  transform: translate(-14px, -12px);
-  box-shadow: 14px 12px 0px rgba(0, 0, 0);
-}
-
-
-/* SKILLS */
-#skillsFloatingLink {
-  display: block;
-  width: 360px;
-  height: 200px;
-  background-color: #f5f5f5;
-  border: 1px solid #e0e0e0;
-  position: absolute;
-  top: 880px;
-  right: 230px;
-  text-align: center;
-  line-height: 200px; /* This is to vertically center the text inside the box */
-  text-decoration: none; /* Removes the underline from the link */
-  color: #333;
-  font-family: Arial, sans-serif;
-  transition:  0.3s ease; /* For hover effect */
-}
-#skillsFloatingLink:hover {
-  background-color: #e0e0e0;
-  transform: translate(-14px, -12px);
-  box-shadow: 14px 12px 0px rgba(0, 0, 0);
-}
-
-
-/* END OF HERO */
-
-
-#valueProposition {
+main {
   background-color: var(--primaryColor);
-  padding: 20px 15%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  /* padding-top: 85px; */
+  padding: 85px 15% 0;
+
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
-}
-#valueProposition p {
-  /* width: 1200px; */
-  display: flex;
-  text-align: center;
-  line-height: 1.3em;
-  letter-spacing: 0.05em;
-  font-size: 18px;
-  margin: 20px;
-}
-#valueProposition button, #contactBtn {
-  padding: 10px 15px;
-  background-color: #000;
-  color: #FFF;
-  text-decoration: none;
-  border-radius: 3px;
-  cursor: pointer;
-  border: none;
+  justify-content: space-between;
 }
 
-
-/* END OF VALUE PROPOSITION' */
-
-
-#about {
-  display: flex;
-  background-color: var(--primaryColor);
-  padding: 20px 15%;
-  margin-bottom: 10px;
-  border: 4px solid var(--navSecondary);
+#text h1 {
+  color: #fff;
+  font-size: 36px;
 }
 
-#aboutText {
-  width: 50%;
-}
-#aboutText h2 {
-  font-size: 38px;
-}
-#aboutText p {
-  line-height: 1.5em;
-
-}
-#aboutLink {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#aboutBtn {
-  padding: 20px;
-  height: 500px;
+#text p {
+  margin: 0 120px 0 0;
+  color: #fff;
+  font-size: 17px;
+  /* font-weight: 600; */
+  line-height: 2em;
 }
 
-
-
-
-
-
-
-
-#footer {
-  background-color: var(--navSecondary);
-  padding: 20px 15%;
+#imgOfMe #imgWireframe {
+  width: 500px;
+  height: 80vh;
 }
-#footer li {
-  display: block;
-  
-}
-#footer a {
-  text-decoration: none;
 
-}
-/* #footer li, #footer a {
-  width: fit-content;
-  padding: 10px 20px;  /* -20px from the padding *
-  transform: translateX(-20px);
-} */
+#imgOfMe #me1 {
+  height: 80vh;
+  width: auto;
 
+  position: absolute;
+  transform: translateX(-100%);
+  /* padding: 20px 0 0 10px; */
+}
 
 
 
